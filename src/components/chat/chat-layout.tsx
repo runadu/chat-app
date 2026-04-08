@@ -1,7 +1,7 @@
 "use client";
 
-import Sidebar from "./Sidebar";
-import ChatWindow from "./ChatWindow";
+import Sidebar from "./sidebar";
+import ChatWindow from "./chat-window";
 
 export default function ChatLayout() {
   return (

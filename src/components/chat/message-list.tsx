@@ -1,5 +1,5 @@
 import { Message } from "@/types/api";
-import MessageBubble from "./MessageBubble";
+import MessageBubble from "./message-bubble";
 
 export default function MessageList({ messages }: { messages: Message[] }) {
   return (

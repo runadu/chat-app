@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import ReduxProvider from "@/app/ReduxProvider";
+import ReduxProvider from "@/app/provider";
 
 export const metadata: Metadata = {
   title: "AI Chat",

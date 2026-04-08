@@ -1,8 +1,8 @@
 "use client";
 
 import { useAppSelector } from "@/lib/hooks";
-import MessageList from "./MessageList";
-import MessageInput from "./MessageInput";
+import MessageList from "./message-list";
+import MessageInput from "./message-input";
 
 export default function ChatWindow() {
   const { sessions, activeSessionId } = useAppSelector((state) => state.conversations);
