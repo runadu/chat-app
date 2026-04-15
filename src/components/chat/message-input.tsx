@@ -36,14 +36,18 @@ export default function MessageInput() {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className="flex flex-col gap-2 sm:flex-row">
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Type your message..."
-        className="flex-1 rounded border px-4 py-2"
+        className="min-w-0 flex-1 rounded border border-gray-300 px-4 py-2"
       />
-      <button onClick={handleSend} className="rounded bg-black px-4 py-2 text-white">
+
+      <button
+        onClick={handleSend}
+        className="rounded bg-black px-4 py-2 text-white sm:self-auto"
+      >
         Send
       </button>
     </div>
