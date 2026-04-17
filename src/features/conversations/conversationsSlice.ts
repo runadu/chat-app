@@ -49,6 +49,16 @@ const conversationsSlice = createSlice({
       state.activeSessionId = action.payload;
     },
 
+    renameSession: (
+      state,
+      action: PayloadAction<{ sessionId: string; title: string }>
+    ) => {
+      const session = state.sessions.find((s) => s.id === action.payload.sessionId);
+      if (!session) return;
+
+      session.title = action.payload.title.trim();
+    },
+
     addMessage: (
       state,
       action: PayloadAction<{ sessionId: string; message: Omit<Message, "id" | "createdAt"> }>
@@ -94,6 +104,7 @@ export const {
   createSession,
   deleteSession,
   setActiveSession,
+  renameSession,
   addMessage,
   updateLastAssistantMessage,
 } = conversationsSlice.actions;
